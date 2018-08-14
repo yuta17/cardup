@@ -1,6 +1,6 @@
 Lita.configure do |config|
   # The name your robot will use.
-  config.robot.name = "Lita"
+  config.robot.name = 'cardup'
 
   # The locale code for the language to use.
   # config.robot.locale = :en
@@ -17,7 +17,8 @@ Lita.configure do |config|
 
   # The adapter you want to connect with. Make sure you've added the
   # appropriate gem to the Gemfile.
-  config.robot.adapter = :shell
+  config.robot.adapter = :slack
+  config.adapters.slack.token = ENV['SLACK_API_KEY']
 
   ## Example: Set options for the chosen adapter.
   # config.adapter.username = "myname"
