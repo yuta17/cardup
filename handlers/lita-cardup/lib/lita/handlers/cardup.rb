@@ -2,7 +2,9 @@ module Lita
   module Handlers
     class Cardup < Handler
       # insert handler code here
-      route /(.+)/, :reply_card
+      route /(.+)/,
+        :reply_card,
+        command: true # reply only the menthon to bot
 
       def reply_card(response)
         target_word = response.matches[0][0]
